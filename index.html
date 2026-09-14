@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Technology | Contracting</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Green Technology: Pioneers in high-end landscaping, general contracting, and professional finishing.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#152C17', // Very deep forest green
+                        primaryLight: '#2A512C', // Medium forest green
+                        accent: '#D4AF37', // Elegant Gold
+                        surface: '#F8F6F0', // Warm cream paper
+                        dark: '#0A0F0B' // Near black
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                        arabic: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Language Toggle Logic */
+        .lang-ar { display: none; }
+        .lang-en { display: inline-block; }
+        
+        html[dir="rtl"] .lang-ar { display: inline-block; }
+        html[dir="rtl"] .lang-en { display: none; }
+        
+        /* Font Overrides for Arabic */
+        html[dir="rtl"] body {
+            font-family: 'Cairo', sans-serif !important;
+        }
+        html[dir="rtl"] .font-display {
+            font-family: 'Cairo', sans-serif !important;
+            font-weight: 700;
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Gradient Background */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0A0F0B 0%, #152C17 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-dark font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-dark">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="absolute inset-0 bg-primary/95 backdrop-blur-md shadow-lg"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-4">
+                    <img class="h-16 w-auto" src="logo.svg" alt="Green Technology Logo" onerror="this.src='https://ui-avatars.com/api/?name=Green+Technology&background=D4AF37&color=152C17&rounded=true'">
+                    <div class="text-white hidden sm:block">
+                        <div class="text-xl font-display font-semibold tracking-wide">GREEN TECHNOLOGY</div>
+                        <div class="text-accent text-xs tracking-widest uppercase"><span class="lang-en">For General Contracting</span><span class="lang-ar">للمقاولات العامة</span></div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#services" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase">
+                        <span class="lang-en">Services</span><span class="lang-ar">خدماتنا</span>
+                    </a>
+                    <a href="#gallery" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase">
+                        <span class="lang-en">Gallery</span><span class="lang-ar">معرض الأعمال</span>
+                    </a>
+                    <a href="#projects" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase">
+                        <span class="lang-en">Locations</span><span class="lang-ar">مواقعنا</span>
+                    </a>
+                    <a href="#contact" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase">
+                        <span class="lang-en">Contact</span><span class="lang-ar">تواصل معنا</span>
+                    </a>
+                    
+                    <!-- Language Toggle -->
+                    <button onclick="toggleLanguage()" class="ml-4 px-4 py-2 border border-accent/30 rounded text-accent hover:bg-accent hover:text-primary transition-all text-sm font-semibold">
+                        <span class="lang-en">العربية</span><span class="lang-ar">English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-24 hero-gradient overflow-hidden">
+        <!-- Abstract Background Shapes -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primaryLight blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-[500px] h-[500px] rounded-full bg-accent blur-3xl opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-accent text-sm mb-6">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        <span class="lang-en">Premium General Contracting</span>
+                        <span class="lang-ar">المقاولات العامة الراقية</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-display text-white mb-6 leading-tight">
+                        <span class="lang-en">Excellence in <br><span class="text-accent italic">Construction</span> & <br>Landscaping.</span>
+                        <span class="lang-ar">التميز في <br><span class="text-accent">البناء</span> و <br>اللاندسكيب.</span>
+                    </h1>
+                    
+                    <p class="text-gray-300 text-lg mb-10 max-w-lg leading-relaxed font-light">
+                        <span class="lang-en">We deliver high-end landscape design, professional finishing, and expert electrical engineering. Building the future with 30+ years of global expertise.</span>
+                        <span class="lang-ar">نقدم تصاميم لاندسكيب راقية، تشطيبات احترافية، وهندسة كهربائية بخبرة عالمية تتجاوز 30 عاماً.</span>
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-accent text-primary font-semibold rounded hover:bg-white transition-colors duration-300">
+                            <span class="lang-en">Start Your Project</span>
+                            <span class="lang-ar">ابدأ مشروعك</span>
+                        </a>
+                        <a href="#services" class="px-8 py-4 border border-white/20 text-white font-semibold rounded hover:bg-white/10 transition-colors duration-300">
+                            <span class="lang-en">Our Services</span>
+                            <span class="lang-ar">خدماتنا</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Imagery Grid -->
+                <div class="hidden lg:grid grid-cols-2 gap-4 h-[600px]">
+                    <div class="bg-gray-800 rounded-lg overflow-hidden relative mt-12">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Villa exterior" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="grid grid-rows-2 gap-4">
+                        <div class="bg-gray-800 rounded-lg overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1558904541-efa843a96f0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landscaping" class="absolute inset-0 w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div class="bg-primaryLight rounded-lg overflow-hidden relative p-8 flex flex-col justify-end">
+                            <div class="text-accent text-5xl font-display mb-2">30+</div>
+                            <div class="text-white text-sm uppercase tracking-wider">
+                                <span class="lang-en">Years Experience</span>
+                                <span class="lang-ar">سنوات خبرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent text-sm font-bold tracking-widest uppercase mb-3">
+                    <span class="lang-en">What We Do</span>
+                    <span class="lang-ar">ماذا نقدم</span>
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-display text-primary">
+                    <span class="lang-en">Our Expertise</span>
+                    <span class="lang-ar">خبراتنا وخدماتنا</span>
+                </h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                        <svg class="w-7 h-7 text-primary group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-display text-primary mb-3">
+                        <span class="lang-en">Landscape & Hardscape</span>
+                        <span class="lang-ar">اللاندسكيب والهاردسكيب</span>
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="lang-en">Comprehensive landscape architecture, ornamental plant supply, and professional pruning. Transforming outdoor spaces into breathtaking environments.</span>
+                        <span class="lang-ar">تصميم وتنسيق اللاندسكيب، توريد زراعات الزينة والمثمرة، والصيانة الاحترافية لتحويل المساحات الخارجية إلى بيئة خلابة.</span>
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                        <svg class="w-7 h-7 text-primary group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-display text-primary mb-3">
+                        <span class="lang-en">Construction & Finishing</span>
+                        <span class="lang-ar">البناء والتشطيبات الراقية</span>
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="lang-en">High-end finishing, professional villa construction, gypsum board works, and meticulous attention to architectural details.</span>
+                        <span class="lang-ar">بناء الفلل الاحترافي، أعمال الجبسون بورد، والتشطيبات الراقية مع اهتمام دقيق بالتفاصيل المعمارية.</span>
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                        <svg class="w-7 h-7 text-primary group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-display text-primary mb-3">
+                        <span class="lang-en">Professional Electrical</span>
+                        <span class="lang-ar">الكهرباء الاحترافية</span>
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="lang-en">Led by engineers with over 30 years of global expertise in power stations and heavy electrical infrastructure.</span>
+                        <span class="lang-ar">بقيادة مهندسين بخبرة تفوق 30 عاماً في الشركات الأجنبية ومحطات الكهرباء والبنية التحتية الثقيلة.</span>
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group bg-white p-10 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/5 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent/10 transition-colors">
+                        <svg class="w-7 h-7 text-primary group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h4 class="text-2xl font-display text-primary mb-3">
+                        <span class="lang-en">Plants & Irrigation</span>
+                        <span class="lang-ar">الزراعة وشبكات الري</span>
+                    </h4>
+                    <p class="text-gray-600 leading-relaxed">
+                        <span class="lang-en">Design and installation of advanced irrigation networks, alongside export and supply of premium agricultural assets.</span>
+                        <span class="lang-ar">تصميم وتركيب شبكات الري الحديثة، إلى جانب توريد وتصدير الزراعات والأصول الزراعية المتميزة.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent text-sm font-bold tracking-widest uppercase mb-3">
+                    <span class="lang-en">Portfolio</span>
+                    <span class="lang-ar">معرض الأعمال</span>
+                </h2>
+                <h3 class="text-4xl md:text-5xl font-display text-primary">
+                    <span class="lang-en">Recent Works</span>
+                    <span class="lang-ar">أحدث مشاريعنا</span>
+                </h3>
+                <p class="mt-4 text-gray-500 max-w-2xl mx-auto">
+                    <span class="lang-en">Browse a selection of our finest landscaping, contracting, and finishing projects across Egypt.</span>
+                    <span class="lang-ar">تصفح مجموعة مختارة من أفضل مشاريعنا في اللاندسكيب والمقاولات والتشطيبات في مصر.</span>
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Landscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Landscape</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">لاندسكيب</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">Toshka | توشكى</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Finishing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Villa Finishing</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تشطيبات فلل</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">Al Alameen | العلمين</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plants" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Plantation</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">زراعة وتوريد</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">Nubariya | النوبارية</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1587317706509-f537c3dae1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hardscape" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Hardscape</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هاردسكيب</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">Mostakbal | المستقبل</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Irrigation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Irrigation</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">شبكات ري</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">East Owainat | شرق العوينات</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] cursor-pointer shadow-md">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electrical" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Engineering</span>
+                        <span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هندسة كهربائية</span>
+                        <span class="text-accent text-sm uppercase tracking-widest">Projects | مشاريع متنوعة</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="px-8 py-3 border-2 border-primary text-primary font-semibold rounded hover:bg-primary hover:text-white transition-colors duration-300">
+                    <span class="lang-en">View Full Gallery</span>
+                    <span class="lang-ar">عرض المعرض كاملاً</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Locations Section -->
+    <section id="projects" class="py-24 bg-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-accent text-sm font-bold tracking-widest uppercase mb-3">
+                        <span class="lang-en">Our Footprint</span>
+                        <span class="lang-ar">مواقع العمل</span>
+                    </h2>
+                    <h3 class="text-4xl md:text-5xl font-display text-white">
+                        <span class="lang-en">Project Locations</span>
+                        <span class="lang-ar">نطاق المشاريع</span>
+                    </h3>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <!-- Location Items -->
+                <div class="bg-primary/20 border border-white/10 rounded-lg p-6 text-center hover:bg-primary/40 transition-colors">
+                    <div class="text-accent mb-3 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="font-medium text-lg">
+                        <span class="lang-en">Toshka</span><span class="lang-ar">توشكى</span>
+                    </span>
+                </div>
+                <div class="bg-primary/20 border border-white/10 rounded-lg p-6 text-center hover:bg-primary/40 transition-colors">
+                    <div class="text-accent mb-3 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="font-medium text-lg">
+                        <span class="lang-en">East Owainat</span><span class="lang-ar">شرق العوينات</span>
+                    </span>
+                </div>
+                <div class="bg-primary/20 border border-white/10 rounded-lg p-6 text-center hover:bg-primary/40 transition-colors">
+                    <div class="text-accent mb-3 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="font-medium text-lg">
+                        <span class="lang-en">Al Alameen</span><span class="lang-ar">العلمين الجديدة</span>
+                    </span>
+                </div>
+                <div class="bg-primary/20 border border-white/10 rounded-lg p-6 text-center hover:bg-primary/40 transition-colors">
+                    <div class="text-accent mb-3 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="font-medium text-lg">
+                        <span class="lang-en">Mostakbal City</span><span class="lang-ar">المستقبل</span>
+                    </span>
+                </div>
+                <div class="bg-primary/20 border border-white/10 rounded-lg p-6 text-center hover:bg-primary/40 transition-colors">
+                    <div class="text-accent mb-3 flex justify-center">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <span class="font-medium text-lg">
+                        <span class="lang-en">New Nubariya</span><span class="lang-ar">النوبارية</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="bg-primary text-white pt-24 pb-12 border-t border-accent/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img class="h-12 w-auto filter brightness-0 invert opacity-90" src="logo.svg" alt="Green Technology Logo" onerror="this.style.display='none'">
+                    </div>
+                    <div class="text-2xl font-display font-semibold mb-4 leading-tight">GREEN <br><span class="text-accent">TECHNOLOGY</span></div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        <span class="lang-en">Setting the standard in general contracting, professional finishing, and high-end landscape architecture.</span>
+                        <span class="lang-ar">نضع المعايير في المقاولات العامة، التشطيبات الاحترافية، وهندسة اللاندسكيب الراقية.</span>
+                    </p>
+                </div>
+                
+                <!-- Phone Numbers -->
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6">
+                        <span class="lang-en">Phones</span><span class="lang-ar">أرقام الهواتف</span>
+                    </h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <a href="tel:01009077506" class="hover:text-white transition-colors" dir="ltr">0100 907 7506</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-transparent shrink-0" viewBox="0 0 24 24"></svg>
+                            <a href="tel:01279627782" class="hover:text-white transition-colors" dir="ltr">0127 962 7782</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-transparent shrink-0" viewBox="0 0 24 24"></svg>
+                            <a href="tel:01090560793" class="hover:text-white transition-colors" dir="ltr">0109 056 0793</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-transparent shrink-0" viewBox="0 0 24 24"></svg>
+                            <a href="tel:01127221467" class="hover:text-white transition-colors" dir="ltr">0112 722 1467</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Emails (Leadership & Team) -->
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6">
+                        <span class="lang-en">Emails</span><span class="lang-ar">البريد الإلكتروني</span>
+                    </h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Founder</span><span class="lang-ar">المؤسس</span></div>
+                            <a href="mailto:m.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">m.sultan@green-technology.tech</a>
+                        </li>
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Support</span><span class="lang-ar">الدعم الفني</span></div>
+                            <a href="mailto:g.t.c@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">g.t.c@green-technology.tech</a>
+                        </li>
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Management</span><span class="lang-ar">الإدارة</span></div>
+                            <a href="mailto:youssef.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm mb-1">youssef.sultan@green-technology.tech</a>
+                            <a href="mailto:momen.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">momen.sultan@green-technology.tech</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Form -->
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6">
+                        <span class="lang-en">Inquiries</span><span class="lang-ar">استفسارات</span>
+                    </h4>
+                    <form class="space-y-3" onsubmit="event.preventDefault(); alert('Form integration coming soon!');">
+                        <input type="text" placeholder="Name" class="w-full bg-white/5 border border-white/10 rounded px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm" required>
+                        <input type="email" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 rounded px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm" required>
+                        <textarea placeholder="Message" rows="2" class="w-full bg-white/5 border border-white/10 rounded px-4 py-2 text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm" required></textarea>
+                        <button type="submit" class="w-full bg-accent text-primary font-semibold py-2 rounded hover:bg-white transition-colors text-sm">
+                            <span class="lang-en">Send Message</span><span class="lang-ar">إرسال</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2026 Green Technology. <span class="lang-en">All rights reserved.</span><span class="lang-ar">جميع الحقوق محفوظة.</span></p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-accent transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Logic
+        let currentLang = 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            
+            if (currentLang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            }
+        }
+        
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
