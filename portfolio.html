@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#152C17',
+                        primaryLight: '#2A512C',
+                        accent: '#D4AF37',
+                        surface: '#F8F6F0',
+                        dark: '#0A0F0B'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                        arabic: ['Cairo', 'sans-serif']
+                    },
+                    animation: {
+                        marquee: 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .lang-ar { display: none; }
+        .lang-en { display: inline-block; }
+        html[dir="rtl"] .lang-ar { display: inline-block; }
+        html[dir="rtl"] .lang-en { display: none; }
+        html[dir="rtl"] body { font-family: 'Cairo', sans-serif !important; }
+        html[dir="rtl"] .font-display { font-family: 'Cairo', sans-serif !important; font-weight: 700; }
+        html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(135deg, #0A0F0B 0%, #152C17 100%); }
+    </style>
+</head>
+<body class="bg-surface text-dark font-sans antialiased overflow-x-hidden selection:bg-accent selection:text-dark flex flex-col min-h-screen">
+    <nav class="fixed w-full z-50 transition-all duration-300 shadow-md bg-primary/95 backdrop-blur-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-4">
+                    <img class="h-16 w-auto" src="logo.svg" alt="Green Technology Logo" onerror="this.src='https://ui-avatars.com/api/?name=Green+Technology&background=D4AF37&color=152C17&rounded=true'">
+                    <div class="text-white hidden sm:block">
+                        <div class="text-xl font-display font-semibold tracking-wide">GREEN TECHNOLOGY</div>
+                        <div class="text-accent text-xs tracking-widest uppercase"><span class="lang-en">For General Contracting</span><span class="lang-ar">للمقاولات العامة</span></div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase"><span class="lang-en">Home</span><span class="lang-ar">الرئيسية</span></a>
+                    <a href="services.html" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase"><span class="lang-en">Services</span><span class="lang-ar">خدماتنا</span></a>
+                    <a href="portfolio.html" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase"><span class="lang-en">Portfolio</span><span class="lang-ar">معرض الأعمال</span></a>
+                    <a href="contact.html" class="text-gray-200 hover:text-accent transition-colors text-sm font-medium tracking-wide uppercase"><span class="lang-en">Contact</span><span class="lang-ar">تواصل معنا</span></a>
+                    <button onclick="toggleLanguage()" class="ml-4 px-4 py-2 border border-accent/30 rounded text-accent hover:bg-accent hover:text-primary transition-all text-sm font-semibold">
+                        <span class="lang-en">العربية</span><span class="lang-ar">English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-accent text-sm font-bold tracking-widest uppercase mb-3"><span class="lang-en">Our Work</span><span class="lang-ar">أعمالنا</span></h2>
+                <h3 class="text-4xl md:text-5xl font-display text-primary mb-6"><span class="lang-en">Project Gallery</span><span class="lang-ar">معرض المشاريع</span></h3>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg"><span class="lang-en">A showcase of our premium projects across Egypt, from luxury villas to massive agricultural developments.</span><span class="lang-ar">استعراض لأبرز مشاريعنا في مصر، من الفلل الفاخرة إلى المشاريع الزراعية الضخمة.</span></p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-24">
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-7.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Exterior Design</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تصميم خارجي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-8.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Agricultural Support</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">دعم زراعي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-9.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Lighting Systems</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">أنظمة إضاءة</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-10.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Decorations</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">ديكورات</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-11.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Landscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">لاندسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-12.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Villa Finishing</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تشطيبات فلل</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-13.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Plantation</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">زراعة وتوريد</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-14.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Hardscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هاردسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-15.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Irrigation Networks</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">شبكات ري</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-16.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Engineering Projects</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هندسة كهربائية</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-17.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Exterior Design</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تصميم خارجي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-18.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Agricultural Support</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">دعم زراعي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-19.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Lighting Systems</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">أنظمة إضاءة</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-20.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Decorations</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">ديكورات</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-21.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Landscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">لاندسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-22.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Villa Finishing</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تشطيبات فلل</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-23.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Plantation</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">زراعة وتوريد</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-24.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Hardscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هاردسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-25.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Irrigation Networks</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">شبكات ري</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-26.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Engineering Projects</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هندسة كهربائية</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-27.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Exterior Design</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تصميم خارجي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-28.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Agricultural Support</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">دعم زراعي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-29.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Lighting Systems</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">أنظمة إضاءة</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-30.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Decorations</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">ديكورات</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-31.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Landscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">لاندسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-32.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Villa Finishing</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تشطيبات فلل</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-33.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Plantation</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">زراعة وتوريد</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-34.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Hardscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هاردسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-35.jpeg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Irrigation Networks</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">شبكات ري</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-36.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Engineering Projects</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هندسة كهربائية</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-37.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Exterior Design</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تصميم خارجي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-38.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Agricultural Support</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">دعم زراعي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-39.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Lighting Systems</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">أنظمة إضاءة</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-40.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Decorations</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">ديكورات</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-41.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Landscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">لاندسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-42.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Villa Finishing</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تشطيبات فلل</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-43.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Plantation</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">زراعة وتوريد</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-44.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Hardscape</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هاردسكيب</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-45.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Irrigation Networks</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">شبكات ري</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-46.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Engineering Projects</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">هندسة كهربائية</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-47.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Exterior Design</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">تصميم خارجي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-48.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Agricultural Support</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">دعم زراعي</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-49.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Lighting Systems</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">أنظمة إضاءة</span>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[4/3] shadow-md">
+                    <img src="images/gallery-50.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
+                        <span class="text-white font-display text-2xl mb-1 lang-en">Decorations</span><span class="text-white font-display text-2xl font-bold mb-1 lang-ar">ديكورات</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <h3 class="text-3xl font-display text-primary mb-8 text-center border-t pt-16"><span class="lang-en">Our Project Locations</span><span class="lang-ar">مواقع العمل</span></h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-primary"><span class="lang-en">Toshka</span><span class="lang-ar">توشكى</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-primary"><span class="lang-en">East Owainat</span><span class="lang-ar">شرق العوينات</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-primary"><span class="lang-en">Al Alameen</span><span class="lang-ar">العلمين الجديدة</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-primary"><span class="lang-en">Mostakbal City</span><span class="lang-ar">المستقبل</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-primary"><span class="lang-en">New Nubariya</span><span class="lang-ar">النوبارية</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-accent"><span class="lang-en">Zhara, North Coast</span><span class="lang-ar">زهرة الساحل الشمالي</span></div>
+                <div class="bg-surface p-4 rounded text-center border border-gray-200 font-semibold text-accent"><span class="lang-en">New Aswan</span><span class="lang-ar">أسوان الجديدة</span></div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <!-- Partners Marquee -->
+    <div class="bg-gray-100 py-6 overflow-hidden border-t border-b border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-4">
+            <h4 class="text-center text-sm font-bold text-gray-500 uppercase tracking-widest">
+                <span class="lang-en">Our Trusted Partners</span><span class="lang-ar">شركاء النجاح</span>
+            </h4>
+        </div>
+        <div class="flex space-x-12 animate-marquee whitespace-nowrap items-center text-xl font-display font-semibold text-gray-400">
+            <span class="mx-8 uppercase">Hassan Allam Construction</span>
+            <span class="mx-8 uppercase">Elmorshedy</span>
+            <span class="mx-8 uppercase">Orascom Construction</span>
+            <span class="mx-8 uppercase">Intecsa Industrial Engineering</span>
+            <span class="mx-8 uppercase">Siemens</span>
+            <span class="mx-8 uppercase">El Zahy Group</span>
+            <span class="mx-8 uppercase">Hassan Allam Construction</span>
+            <span class="mx-8 uppercase">Elmorshedy</span>
+            <span class="mx-8 uppercase">Orascom Construction</span>
+            <span class="mx-8 uppercase">Intecsa Industrial Engineering</span>
+            <span class="mx-8 uppercase">Siemens</span>
+            <span class="mx-8 uppercase">El Zahy Group</span>
+            <span class="mx-8 uppercase">Hassan Allam Construction</span>
+            <span class="mx-8 uppercase">Elmorshedy</span>
+            <span class="mx-8 uppercase">Orascom Construction</span>
+            <span class="mx-8 uppercase">Intecsa Industrial Engineering</span>
+            <span class="mx-8 uppercase">Siemens</span>
+            <span class="mx-8 uppercase">El Zahy Group</span>
+        </div>
+    </div>
+
+    <!-- Contact & Footer -->
+    <footer class="bg-primary text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <img class="h-12 w-auto filter brightness-0 invert opacity-90 mb-6" src="logo.svg" alt="Green Technology Logo" onerror="this.style.display='none'">
+                    <div class="text-2xl font-display font-semibold mb-4 leading-tight">GREEN <br><span class="text-accent">TECHNOLOGY</span></div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        <span class="lang-en">Setting the standard in general contracting, professional finishing, and high-end landscape architecture.</span>
+                        <span class="lang-ar">نضع المعايير في المقاولات العامة، التشطيبات الاحترافية، وهندسة اللاندسكيب الراقية.</span>
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6"><span class="lang-en">Phones</span><span class="lang-ar">أرقام الهواتف</span></h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="tel:01009077506" class="hover:text-white transition-colors" dir="ltr">0100 907 7506</a></li>
+                        <li><a href="tel:01279627782" class="hover:text-white transition-colors" dir="ltr">0127 962 7782</a></li>
+                        <li><a href="tel:01090560793" class="hover:text-white transition-colors" dir="ltr">0109 056 0793</a></li>
+                        <li><a href="tel:01127221467" class="hover:text-white transition-colors" dir="ltr">0112 722 1467</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6"><span class="lang-en">Emails</span><span class="lang-ar">البريد الإلكتروني</span></h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Founder</span><span class="lang-ar">المؤسس</span></div>
+                            <a href="mailto:m.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">m.sultan@green-technology.tech</a>
+                        </li>
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Support</span><span class="lang-ar">الدعم الفني</span></div>
+                            <a href="mailto:g.t.c@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">g.t.c@green-technology.tech</a>
+                        </li>
+                        <li>
+                            <div class="text-xs text-accent mb-1 uppercase tracking-wider"><span class="lang-en">Management</span><span class="lang-ar">الإدارة</span></div>
+                            <a href="mailto:youssef.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm mb-1">youssef.sultan@green-technology.tech</a>
+                            <a href="mailto:momen.sultan@green-technology.tech" class="hover:text-white transition-colors block break-all text-sm">momen.sultan@green-technology.tech</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-display text-accent mb-6"><span class="lang-en">Quick Links</span><span class="lang-ar">روابط سريعة</span></h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="services.html" class="hover:text-white transition-colors"><span class="lang-en">Our Services</span><span class="lang-ar">خدماتنا</span></a></li>
+                        <li><a href="portfolio.html" class="hover:text-white transition-colors"><span class="lang-en">Portfolio</span><span class="lang-ar">أعمالنا</span></a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors"><span class="lang-en">Contact Us</span><span class="lang-ar">تواصل معنا</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2019 Green Technology. <span class="lang-en">All rights reserved.</span><span class="lang-ar">جميع الحقوق محفوظة.</span></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let currentLang = localStorage.getItem('lang') || 'en';
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+            if (currentLang === 'ar') {
+                document.documentElement.setAttribute('dir', 'rtl');
+                document.documentElement.setAttribute('lang', 'ar');
+            } else {
+                document.documentElement.setAttribute('dir', 'ltr');
+                document.documentElement.setAttribute('lang', 'en');
+            }
+        }
+        function toggleLanguage() { setLanguage(currentLang === 'en' ? 'ar' : 'en'); }
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>
